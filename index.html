@@ -28,12 +28,28 @@
       <h1>Welcome to Dungeon Library</h1>
       <p>You can find books and read them from your phone, tablet, computer and even from your toast maker!</p>
       <img src="books.jpg" width="50%" height="50%" alt="Some of our example books">
+      /*
       <button onclick="openEpub()">View PDF</button>
       <div id="pdf-viewer"></div>
       <script>
         function openEpub() {
           var viewer = document.getElementById('pdf-viewer');
           viewer.innerHTML = '<iframe src="Books/example.epub#page=1&zoom=auto" frameborder="0" width="100%" height="100%"></iframe>';
+        }
+      </script>
+      */
+
+      <button onclick="viewPdf()">View PDF</button>
+      <script>
+        function viewPdf() {
+          var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+          var pdfUrl = 'example.pdf';
+          var epubUrl = 'example.epub';
+          if (isMobile) {
+            window.location.href = epubUrl;
+          } else {
+          window.open(pdfUrl);
+          }
         }
       </script>
     </main>
