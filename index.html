@@ -28,7 +28,7 @@
       <h1>Welcome to Dungeon Library</h1>
       <p>You can find books and read them from your phone, tablet, computer and even from your toast maker!</p>
       <img src="books.jpg" width="50%" height="50%" alt="Some of our example books">
-      /*
+      
       <button onclick="openEpub()">View PDF</button>
       <div id="pdf-viewer"></div>
       <script>
@@ -37,19 +37,28 @@
           viewer.innerHTML = '<iframe src="Books/example.epub#page=1&zoom=auto" frameborder="0" width="100%" height="100%"></iframe>';
         }
       </script>
-      */
+      
 
       <button onclick="viewPdf()">View PDF</button>
       <script>
         function viewPdf() {
           var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-          var pdfUrl = 'example.pdf';
+          var pdfUrl = 'Books.pdf';
           var epubUrl = 'example.epub';
           if (isMobile) {
             window.location.href = epubUrl;
           } else {
-          window.open(pdfUrl);
+            window.open(pdfUrl);
           }
+        }
+      </script>
+
+      <button onclick="viewPDF()">View PDFf</button>
+      <script>
+        function viewPDF() {
+          var pdf = "Books/example.pdf";
+          var url = "https://drive.google.com/viewerng/viewer?embedded=true&url=" + encodeURIComponent(pdf);
+          window.open(url, "_blank");
         }
       </script>
     </main>
