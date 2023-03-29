@@ -28,7 +28,14 @@
       <h1>Welcome to Dungeon Library</h1>
       <p>You can find books and read them from your phone, tablet, computer and even from your toast maker!</p>
       <img src="books.jpg" width="50%" height="50%" alt="Some of our example books">
-      <button>Click Here</button>
+      <button id="view-button">Click Here</button>
+
+      <script>
+        document.getElementById("view-button").addEventListener("click", function() {
+          var book = ePub("Books/example.epub");
+          book.renderTo("viewer");
+        });
+      </script>
     </main>
     <footer>
       <p>&copy; 2023 Dungeon Library. All rights reserved.</p>
