@@ -61,6 +61,17 @@
           window.open(url, "_blank");
         }
       </script>
+
+      <button onclick="viewPDF()">View PDFfff</button>
+      <script>
+        function viewPDF() {
+          var pdfPath = 'Books/Document.pdf';
+          var book = ePub(pdfPath);
+          var viewer = document.getElementById('viewer');
+          book.renderTo(viewer);
+          book.gotoPage(1);
+        }
+      </script>
     </main>
     <footer>
       <p>&copy; 2023 Dungeon Library. All rights reserved.</p>
