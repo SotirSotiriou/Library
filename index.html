@@ -43,7 +43,7 @@
       <script>
         function viewPdf() {
           var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-          var pdfUrl = 'Books.pdf';
+          var pdfUrl = 'Book.pdf';
           var epubUrl = 'example.epub';
           if (isMobile) {
             window.location.href = epubUrl;
@@ -56,7 +56,7 @@
       <button onclick="viewPDF()">View PDFf</button>
       <script>
         function viewPDF() {
-          var pdf = "Books/example.pdf";
+          var pdf = "Books/Document.pdf";
           var url = "https://drive.google.com/viewerng/viewer?embedded=true&url=" + encodeURIComponent(pdf);
           window.open(url, "_blank");
         }
