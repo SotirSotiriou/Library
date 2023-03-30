@@ -112,9 +112,9 @@ input[type="text"] {
 }
 
 img {
-  transition: transform 0.2s;
+  transition: transform 0.5s ease-in-out;
 }
 
 img:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
