@@ -112,5 +112,5 @@ input[type="text"] {
 }
 
 .image-hover:hover {
-  opacity: 0.7;
+  transform: scale(1.5);
 }
