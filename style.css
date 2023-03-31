@@ -118,3 +118,13 @@ img {
 img:hover {
   transform: scale(1.2);
 }
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-container img {
+  width: 50%;
+  height: auto;
+}
