@@ -128,3 +128,11 @@ img:hover {
   width: 50%;
   height: auto;
 }
+
+.zoom-in {
+  transition: transform 0.5s;
+}
+
+.zoom-in:hover {
+  transform: scale(1.2);
+}
